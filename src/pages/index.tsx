@@ -36,10 +36,10 @@ const Home: NextPage = () => {
           create
         </button>
       </div>
-      {posts &&
-        posts.pages
-          .flatMap((p) => p.posts)
-          .map((p) => <div key={p.id}>{p.id}</div>)}
+      <div>
+        <p>query data is currently:</p>
+        <pre>{JSON.stringify(posts, null, 2)}</pre>
+      </div>
     </>
   );
 };
