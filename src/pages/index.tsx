@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   });
 
   function handleCreate() {
-    create.mutate({ id: new Date().toLocaleString() });
+    create.mutate({ id: String(Math.random()) });
   }
 
   if (!posts) {
